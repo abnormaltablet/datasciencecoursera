@@ -23,21 +23,21 @@ steps:
 #     testResultsFiles: '**/surefire-reports/TEST-*.xml'
 #     goals: 'package'
 - task: JFrogMaven@1
- inputs:
-   mavenPomFile: 'pom.xml'
-   goals: 'clean deploy'
-   artifactoryResolverService: 'rep-azure-anjali'
-   targetResolveReleaseRepo: 'anjalis-libs-release'
-   targetResolveSnapshotRepo: 'anjalis-libs-snapshot'
-   artifactoryDeployService: 'rep-azure-anjali'
-   targetDeployReleaseRepo: 'anjalis-libs-release-local'
-   targetDeploySnapshotRepo: 'anjalis-libs-snapshot-local'
-   collectBuildInfo: true
-   buildName: '$(Build.DefinitionName)'
-   buildNumber: '$(Build.BuildNumber)'
-   includeEnvVars: true
-   javaHomeOption: 'JDKVersion'
-   jdkVersionOption: '1.7'
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'clean deploy'
+    artifactoryResolverService: 'rep-azure-anjali'
+    targetResolveReleaseRepo: 'anjalis-libs-release'
+    targetResolveSnapshotRepo: 'anjalis-libs-snapshot'
+    artifactoryDeployService: 'rep-azure-anjali'
+    targetDeployReleaseRepo: 'anjalis-libs-release-local'
+    targetDeploySnapshotRepo: 'anjalis-libs-snapshot-local'
+    collectBuildInfo: true
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    includeEnvVars: true
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.7'
 
 # trigger:
 # - master
